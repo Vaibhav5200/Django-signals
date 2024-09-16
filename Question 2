@@ -1,0 +1,8 @@
+Yes, Django signals by default run in the same thread as the caller.
+
+Let's check a simple example to calm down our minds. We will use Django signals, a signal handler, and the threading library to check the thread in which both the signal and the signal handler are executed.
+
+Steps:
+We will produce a signal.
+Connect the signal to a signal handler.
+We will print the name of the current thread in both the caller and the handler, so we can check if they are equal.
